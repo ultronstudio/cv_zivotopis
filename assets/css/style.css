@@ -57,6 +57,32 @@ body {
   background: var(--primary-dark);
 }
 
+.lang-switch {
+  display: flex;
+  gap: 6px;
+}
+
+.lang-switch button {
+  border: 1px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  padding: 9px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.lang-switch button:hover {
+  background: rgba(0, 183, 239, 0.1);
+}
+
+.lang-switch button.active {
+  background: var(--primary);
+  color: white;
+}
+
 .cv {
   width: 210mm;
   margin: 24px auto;

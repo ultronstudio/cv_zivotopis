@@ -6,7 +6,7 @@
 
     <meta
       name="description"
-      content="Životopis Petra Vurma – software developera se zkušenostmi s full-stack vývojem, desktopovými aplikacemi, serverovou infrastrukturou, vývojářskými nástroji a herními technologiemi."
+      content="Software developer se zkušenostmi s webovým a full-stack vývojem, desktopovými aplikacemi, infrastrukturou, toolingem a herními technologiemi."
     />
     <meta
       name="keywords"
@@ -58,6 +58,7 @@
     />
 
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/language.js" defer></script>
     <script src="./assets/js/script.js" defer></script>
   </head>
 
@@ -65,8 +66,13 @@
     <div class="toolbar">
       <button type="button" id="printButton">
         <i class="fa-solid fa-print"></i>
-        Vytisknout
+        <span data-i18n="toolbar.printButton">Vytisknout</span>
       </button>
+
+      <div class="lang-switch">
+        <button type="button" data-lang-btn="cs">CZ</button>
+        <button type="button" data-lang-btn="en">EN</button>
+      </div>
     </div>
 
     <main class="cv">
@@ -81,12 +87,12 @@
           <div class="contact-grid">
             <div class="contact-item">
               <i class="fa-solid fa-phone"></i>
-              <a href="tel:+420777416611">777 416 611</a>
+              <a href="tel:+420777416611" rel="nofollow noreferrer noopener">777 416 611</a>
             </div>
 
             <div class="contact-item">
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:kontakt@petrvurm.cz">kontakt@petrvurm.cz</a>
+              <a href="mailto:kontakt@petrvurm.cz" rel="nofollow noreferrer noopener">kontakt@petrvurm.cz</a>
             </div>
 
             <div class="contact-item">
@@ -106,7 +112,7 @@
 
             <div class="contact-item">
               <i class="fa-solid fa-location-dot"></i>
-              <span>Hradec Králové / Nechanice</span>
+              <span data-i18n="contact.location">Nechanice, Královéhradecký kraj, Česká republika</span>
             </div>
           </div>
         </header>
@@ -115,10 +121,10 @@
           <section class="section">
             <div class="section-title">
               <i class="fa-solid fa-user"></i>
-              <span>Profil</span>
+              <span data-i18n="profile.title">Profil</span>
             </div>
 
-            <div class="desc">
+            <div class="desc" data-i18n="profile.desc">
               Software developer se zkušenostmi s vývojem webových, full-stack a
               desktopových aplikací, serverovou infrastrukturou a technickými
               nástroji. Od roku 2024 působím také jako OSVČ. Ve vlastních projektech
@@ -133,25 +139,25 @@
           <section class="section">
             <div class="section-title">
               <i class="fa-solid fa-graduation-cap"></i>
-              <span>Vzdělání</span>
+              <span data-i18n="education.title">Vzdělání</span>
             </div>
 
             <div>
               <article class="entry">
                 <h3>SPŠE a VOŠ Pardubice</h3>
-                <div class="place">
+                <div class="place" data-i18n="education.entry1.program">
                   Informační technologie – vývoj aplikací
                 </div>
-                <div class="meta">
+                <div class="meta" data-i18n="education.entry1.period">
                   září 2026 – 2027
                 </div>
               </article>
               <article class="entry">
                 <h3>SPŠ, SOŠ a SOU Hradební, Hradec Králové</h3>
-                <div class="place">
+                <div class="place" data-i18n="education.entry2.program">
                   Informační technologie – všeobecné studium s maturitou
                 </div>
-                <div class="meta">
+                <div class="meta" data-i18n="education.entry2.period">
                   září 2021 – 2026
                 </div>
               </article>
@@ -161,15 +167,15 @@
           <section class="section">
             <div class="section-title">
               <i class="fa-solid fa-briefcase"></i>
-              <span>Praxe</span>
+              <span data-i18n="experience.title">Praxe</span>
             </div>
 
             <div>
               <article class="entry">
-                <h3>Software Developer, IT technik</h3>
-                <div class="place">Samostatná vývojářská činnost</div>
-                <div class="meta">únor 2024 – dosud</div>
-                <div class="desc">
+                <h3 data-i18n="experience.entry1.role">Software Developer, IT technik</h3>
+                <div class="place" data-i18n="experience.entry1.place">Samostatná vývojářská činnost</div>
+                <div class="meta" data-i18n="experience.entry1.period">únor 2024 – dosud</div>
+                <div class="desc" data-i18n="experience.entry1.desc">
                   Vývoj a údržba webových a desktopových aplikací, backendů,
                   administračních rozhraní a databázových řešení. Samostatná
                   analýza problémů, návrh řešení, implementace, deployment a
@@ -179,24 +185,28 @@
               </article>
 
               <article class="entry">
-                <h3>Externí vývojář</h3>
+                <h3 data-i18n="experience.entry2.role">Externí vývojář</h3>
                 <div class="place">DAMI development s.r.o.</div>
                 <div class="meta">
-                  únor 2024 – květen 2024 <span class="dot">•</span> 4 měsíce
+                  <span data-i18n="experience.entry2.period">únor 2024 – květen 2024</span>
+                  <span class="dot">•</span>
+                  <span data-i18n="experience.entry2.duration">4 měsíce</span>
                 </div>
-                <div class="desc">
+                <div class="desc" data-i18n="experience.entry2.desc">
                   Údržba a úpravy existujících softwarových projektů, orientace
                   ve starší kódové bázi a implementace požadovaných změn.
                 </div>
               </article>
 
               <article class="entry">
-                <h3>Vedoucí školního programátorského týmu</h3>
+                <h3 data-i18n="experience.entry3.role">Vedoucí školního programátorského týmu</h3>
                 <div class="place">SPŠ, SOŠ a SOU Hradební</div>
                 <div class="meta">
-                  červen 2023 – září 2025 <span class="dot">•</span> 2 roky a 4 měsíce
+                  <span data-i18n="experience.entry3.period">červen 2023 – září 2025</span>
+                  <span class="dot">•</span>
+                  <span data-i18n="experience.entry3.duration">2 roky a 4 měsíce</span>
                 </div>
-                <div class="desc">
+                <div class="desc" data-i18n="experience.entry3.desc">
                   Vedení a mentoring členů týmu, rozdělování úkolů,
                   konzultace technických řešení a spolupráce na programátorských
                   projektech.
@@ -215,12 +225,12 @@
           <section class="section">
             <div class="section-title">
               <i class="fa-solid fa-laptop-code"></i>
-              <span>Technické znalosti</span>
+              <span data-i18n="skills.title">Technické znalosti</span>
             </div>
 
             <div>
               <div class="skill-category">
-                <h3>Programovací jazyky a web</h3>
+                <h3 data-i18n="skills.cat1.title">Programovací jazyky a web</h3>
                 <ul class="skill-list">
                   <li><strong>C#</strong></li>
                   <li><strong>PHP</strong></li>
@@ -232,7 +242,7 @@
               </div>
 
               <div class="skill-category">
-                <h3>Frameworky a vývojářské technologie</h3>
+                <h3 data-i18n="skills.cat2.title">Frameworky a vývojářské technologie</h3>
                 <ul class="skill-list">
                   <li><strong>Laravel</strong></li>
                   <li><strong>React</strong></li>
@@ -245,25 +255,25 @@
               </div>
 
               <div class="skill-category">
-                <h3>Databáze, systémy a infrastruktura</h3>
+                <h3 data-i18n="skills.cat3.title">Databáze, systémy a infrastruktura</h3>
                 <ul class="skill-list">
                   <li><strong>MySQL, MariaDB</strong></li>
                   <li><strong>Linux</strong></li>
                   <li><strong>Windows</strong></li>
                   <li><strong>Docker</strong></li>
-                  <li><strong>Monitoring a základní správa sítí</strong></li>
+                  <li><strong data-i18n="skills.cat3.monitoring">Monitoring a základní správa sítí</strong></li>
                 </ul>
               </div>
 
               <div class="skill-category">
-                <h3>Další technické oblasti</h3>
+                <h3 data-i18n="skills.cat4.title">Další technické oblasti</h3>
                 <ul class="skill-list">
-                  <li><strong>Debugging a profiling</strong></li>
+                  <li><strong data-i18n="skills.cat4.debugging">Debugging a profiling</strong></li>
                   <li><strong>Reverse engineering</strong></li>
-                  <li><strong>Game-development a editor tooling</strong></li>
-                  <li><strong>CI/CD a deployment</strong></li>
+                  <li><strong data-i18n="skills.cat4.gamedev">Game-development a editor tooling</strong></li>
+                  <li><strong data-i18n="skills.cat4.cicd">CI/CD a deployment</strong></li>
                   <li><strong>SEO, Google Analytics, Search Console</strong></li>
-                  <li><strong>Adobe Photoshop a střih videa</strong></li>
+                  <li><strong data-i18n="skills.cat4.photoshop">Adobe Photoshop a střih videa</strong></li>
                 </ul>
               </div>
             </div>
@@ -272,21 +282,21 @@
           <section class="section">
             <div class="section-title">
               <i class="fa-solid fa-globe"></i>
-              <span>Jazyky</span>
+              <span data-i18n="languages.title">Jazyky</span>
             </div>
 
             <div>
               <div class="language-row">
-                <strong>čeština</strong> <span class="dot">•</span> rodilý mluvčí
+                <strong data-i18n="languages.cs.lang">čeština</strong> <span class="dot">•</span> <span data-i18n="languages.cs.level">rodilý mluvčí</span>
               </div>
 
               <div class="language-row">
-                <strong>angličtina</strong>
-                <span class="dot">•</span> mírně pokročilá, práce s technickou dokumentací
+                <strong data-i18n="languages.en.lang">angličtina</strong>
+                <span class="dot">•</span> <span data-i18n="languages.en.level">mírně pokročilá, práce s technickou dokumentací</span>
               </div>
 
               <div class="language-row">
-                <strong>němčina</strong> <span class="dot">•</span> začátečník
+                <strong data-i18n="languages.de.lang">němčina</strong> <span class="dot">•</span> <span data-i18n="languages.de.level">začátečník</span>
               </div>
             </div>
           </section>
@@ -294,14 +304,14 @@
           <section class="section">
             <div class="section-title">
               <i class="fa-solid fa-star"></i>
-              <span>Silné stránky</span>
+              <span data-i18n="strengths.title">Silné stránky</span>
             </div>
 
             <ul class="simple-list">
-              <li>Analytické a logické řešení problémů</li>
-              <li>Samostatnost a odpovědnost za svěřenou práci</li>
-              <li>Rychlé učení nových technologií a orientace v cizím kódu</li>
-              <li>Vedení týmu, mentoring a technická komunikace</li>
+              <li data-i18n="strengths.item1">Analytické a logické řešení problémů</li>
+              <li data-i18n="strengths.item2">Samostatnost a odpovědnost za svěřenou práci</li>
+              <li data-i18n="strengths.item3">Rychlé učení nových technologií a orientace v cizím kódu</li>
+              <li data-i18n="strengths.item4">Vedení týmu, mentoring a technická komunikace</li>
             </ul>
           </section>
         </section>
