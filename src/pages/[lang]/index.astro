@@ -1,0 +1,15 @@
+---
+import CvPage from '../../components/CvPage.astro';
+import { locales, type Locale } from '../../data/cv';
+
+export function getStaticPaths() {
+  return locales.map((locale) => ({
+    params: { lang: locale },
+    props: { locale },
+  }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+---
+
+<CvPage locale={locale} />
